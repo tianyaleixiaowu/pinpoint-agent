@@ -22,6 +22,5 @@ RUN apk add --update curl bash \
     && apk del curl \
     && rm /var/cache/apk/*
 
-VOLUME ["/assets/pinpoint-agent"]
 
 ENTRYPOINT ["/usr/local/bin/configure-agent.sh"]
