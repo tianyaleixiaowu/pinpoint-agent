@@ -7,6 +7,7 @@ COLLECTOR_TCP_PORT=${COLLECTOR_TCP_PORT:-9994}
 COLLECTOR_UDP_STAT_LISTEN_PORT=${COLLECTOR_UDP_STAT_LISTEN_PORT:-9995}
 COLLECTOR_UDP_SPAN_LISTEN_PORT=${COLLECTOR_UDP_SPAN_LISTEN_PORT:-9996}
 
+cp -f /assets/pinpoint-agent /assets/pinpoint-agent  
 cp -f /assets/pinpoint.config /assets/pinpoint-agent/pinpoint.config
 
 sed -i "s/profiler.collector.ip=127.0.0.1/profiler.collector.ip=${COLLECTOR_IP}/g" /assets/pinpoint-agent/pinpoint.config
